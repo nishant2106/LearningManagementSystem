@@ -1,0 +1,134 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Configuration;
+using System.Data.SqlClient;
+
+public partial class studentreg : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
+    
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        SqlConnection con = new SqlConnection(
+            WebConfigurationManager.ConnectionStrings["MyDbConn"].ConnectionString);
+        con.Open();
+        if (con.State == System.Data.ConnectionState.Open)
+        {
+            DisplayMessage(this, "Connection to the databaseis successful");
+        }
+    }
+    static public void DisplayMessage(Control page, string msg)
+    {
+        string myScript = String.Format("alert('{0}')", msg);
+        ScriptManager.RegisterStartupScript(page, page.GetType(), "MyScript", myScript, true);
+    }
+}
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data;
+using System.Web.Configuration;
+using System.Data.SqlClient;
+using System.Net;
+using System.Net.Mail;
+
+public partial class Teacher_sreg : System.Web.UI.Page
+{
+    SqlCommand cmd = new SqlCommand();
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        SqlConnection con = new SqlConnection(
+            WebConfigurationManager.ConnectionStrings["MyDbConn"].ConnectionString);
+        cmd = new SqlCommand("Select emailid from teacher_regi where emailid='" + TextBox3.Text + "'", con);
+        SqlDataReader dr;
+        con.Open();
+        //cmd.ExecuteNonQuery();
+        dr = cmd.ExecuteReader();
+        if (dr.Read())
+        {
+            Label8.ForeColor = System.Drawing.Color.Red;
+            Label8.Text = "This email Already Exist";
+            TextBox5.Text = "";
+        }
+        else
+        {
+            String sb = '_'.ToString();
+            String uname = "gpmlearningsystem@gmail.com";
+            String pwd = "gtaddh78";
+
+            try
+            {
+                Session["Name"] = TextBox3.Text;
+                Random rmd = new Random();
+                string str, str2, str3;
+                str2 = chartop();
+                str = rmd.Next(000, 999).ToString();
+                str3 = String.Concat(str2, str);
+                SmtpClient smc = new SmtpClient("smtp.gmail.com", 587);
+                smc.EnableSsl = true;
+                smc.DeliveryMethod = SmtpDeliveryMethod.Network;
+                smc.UseDefaultCredentials = false;
+                smc.Credentials = new NetworkCredential(uname, pwd);
+                MailMessage msg = new MailMessage();
+                msg.To.Add(TextBox3.Text);
+                msg.From = new MailAddress(uname);
+                msg.Subject = "Verification by OTP";
+                msg.Body = "This otp is for verification\n" + str3 + "GPM Learning System is a website that makes learning easy.";
+                smc.Send(msg);
+                String query = "insert into teacher_regi(fname,lname,emailid,password,num,cpass)values('" + TextBox1.Text + "','" + TextBox2.Text + "','" + TextBox3.Text + "','" + TextBox4.Text + "','" + TextBox5.Text + "','" + TextBox6.Text + "','" + str3 + "')";
+                cmd.CommandText = query;
+                cmd.Connection = con;
+                cmd.ExecuteNonQuery();
+                Label7.Text = "New Registration Successfully Saved.";
+                TextBox1.Text = "";
+                TextBox2.Text = "";
+                TextBox3.Text = "";
+                TextBox4.Text = "";
+                TextBox5.Text = "";
+                TextBox6.Text = "";
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+        }
+    }
+
+            protected String chartop()
+    {
+        int i;
+        String sb = '_'.ToString();
+        string sb1;
+        Random rd = new Random();
+        int n = rd.Next(3, 3);
+        for (i = 0; i < n; i++)
+        {
+            int x = rd.Next(0, 25);
+            char let = (char)('a' + x);
+            sb += let.ToString();
+        }
+        sb = sb.Substring(1);
+        sb1 = sb.ToString();
+        return sb1;
+    }
+
+
+
+}
+
+   

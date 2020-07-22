@@ -1,0 +1,118 @@
+﻿body {
+    
+    background:url(book.jpg);
+    width:1300px;
+    height:750px;
+    background-size:cover;
+    background-position:center;
+    font-family:sans-serif;
+}
+.forgot-box{
+    width:320px;
+    height:400px;
+      color:#fff;
+      background:rgba(0,0,0,0.5);
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%);
+    box-sizing:border-box;
+}
+.avatar {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    position:absolute;
+    top:-75px;
+    left:calc(50% - 50px);
+}
+.h1 {
+    margin:0;
+    padding:0 0 20px;
+    text-align:center;
+    font-size:22px;
+    }
+.forgot-box p{
+    margin:0;
+    padding:0;
+    font-weight:bold;
+    
+}
+.forgot-box input{
+    width:100%;
+    margin-bottom:20px;
+}
+.forgot-box input[type="text"], input[type="password"]
+{
+    border:none;
+    border-bottom:1px solid #fff;
+    background:transparent;
+    outline:none;
+    height:40px;
+    color:#fff;
+    font-size:16px;
+}
+#TextBox1
+{
+    border:none;
+    border-bottom:1px solid #fff;
+    background:transparent;
+    outline:none;
+    height:40px;
+    color:#fff;
+    font-size:16px;
+}
+.forgot-box input[type="submit"]
+{
+    border:none;
+    outline:none;
+    height:40px;
+    background:#1c8abd;
+    color:#fff;
+    font-size:18px;
+    border-radius:20px;
+ }
+.forgot-box input[type="submit"]:hover
+{
+        cursor:pointer;
+        background:#39dc79;
+        color:#000;
+ }
+
+.forgot-box input[type="button"]{
+        border:none;
+    outline:none;
+    height:40px;
+    background:#1c8abd;
+    color:#fff;
+    font-size:18px;
+    border-radius:20px;
+    }
+.forgot-box input[type="button"]:hover{
+     border:none;
+    outline:none;
+    height:40px;
+    background:#39dc79;
+    color:#fff;
+    font-size:18px;
+    border-radius:20px;
+}
+.forgot-box a{
+    text-decoration:none;
+    font-size:14px;
+    color:#fff;
+}
+.forgot-box a:hover
+{
+    color: #39dc79;
+}
+.forgot-box input[type="email"]
+{
+    border:none;
+    border-bottom:1px solid #fff;
+    background:transparent;
+    outline:none;
+    height:40px;
+    color:#fff;
+    font-size:16px;
+}

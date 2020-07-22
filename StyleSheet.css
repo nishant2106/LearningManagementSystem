@@ -1,0 +1,254 @@
+﻿ body {
+    width: 1300px;
+    margin:0 auto 0 auto;
+}
+.login{
+    width:1300px;
+    margin:0 auto 0 auto;
+    height: 1002px;
+}
+.right{
+    height:1000px;
+    width:650px;
+    margin:0 auto 0 auto;
+}
+.l1 {
+    height: 500px;
+    width: 400px;
+    float: left;
+    background-color:black;
+    padding: 0px;
+    top:50%;
+    left:50%;
+    position:absolute;
+    transform:translate(-50%,-50%)
+}
+.l1 h1{
+    color:white;
+    margin:0px;
+    padding:0px 0px 20px;
+    text-align:center;
+    font-size:50px;
+}
+#TextBox5
+{
+    border:none;
+    border-bottom:1px solid #fff;
+    background:transparent;
+    outline:none;
+    height:40px;
+    color:#fff;
+    font-size:16px;
+}
+.input{
+    width:100%;
+    margin-bottom:20px;
+}
+.p1{
+    color:white;
+    font-size:30px;
+}
+.button1{
+    background-color:darkred;
+    color:black;
+    font-size:large;
+    outline:none;
+}
+.button1:hover{
+    background-color:black;
+    cursor:pointer;
+    font-size:large;
+    color:#eff;
+
+}
+#UP{
+    text-align:center;
+    font-size:60px;
+    color:black;
+}
+#header{
+    height:160px;
+    background-color:darkred;
+}
+.header1{
+    font-size:50px;
+    color:aliceblue;
+    padding:0px;
+    float:left;
+    font-size:60px;
+    height:160px;
+    width: 646px;
+    margin-left: 33px;
+}
+.input{
+    border:none;
+    background-color:transparent;
+    border-bottom:2px solid #fff;
+}
+.nav{
+    height:50px;
+    background-color:black;
+    width: 1300px;
+}
+.opt{
+    float:left;
+    height:750px;
+    width:271px;
+    margin:0px 31px 0px 0px;
+    background-color:lemonchiffon;
+}
+.con{
+    float:right;
+    background-color:wheat;
+    height:750px;
+    width: 1029px;
+    margin-top:-749px;
+   
+}
+.main{
+    
+    background-color:wheat;
+    height:600px;
+    width: 1100px;
+}
+.footer{
+    
+    clear:both;
+    background-color:darkred;
+    height:40px; 
+}
+.table1 {
+    height: 348px;
+    width: 546px;
+   margin-left:500px;
+}
+
+#header2 {
+    float: right;
+    width: 1000px;
+    height: 160px;
+}
+ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 50px;
+}
+ul li{
+    float:left;
+    height:50px;
+    background-color:black;
+    font-size:30px;
+    line-height:45px;
+    text-align:center;
+}
+ul li a{
+    text-decoration:none;
+    display:block;
+    color:white;
+    height:50px;
+    width: 271px;
+    margin-left: 0px;
+}
+ul li a:hover{
+    background-color:darkred;
+    color:white;
+}
+ul li ul li{
+      text-decoration: none;
+    display: block;
+    color: white;
+    background-color:darkred;
+    height: 50px;
+    font-size:30px;
+    line-height:45px;
+    text-align:center;
+}
+ul li:hover ul li{
+    display:block;
+}
+.opt a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    background-color:darkred;
+    height: 50px;
+    font-size:30px;
+    line-height:45px;
+    text-align:center;
+}
+    .opt a:hover {
+        background-color: wheat;
+        color: black;
+    }
+.con .imgs{
+    height:300px;
+    width:275px;
+    float:left;
+    text-align:center;
+}
+
+.home {
+     text-decoration: none;
+    display: block;
+    color: white;
+    background-color:darkred;
+    height: 50px;
+    font-size:30px;
+    line-height:45px;
+    text-align:center;
+}
+.dash1 {
+    background-color:white;
+    height: 160px;
+    width: 496px;
+    margin-top: 48px;
+    margin-left: 10px;
+    float:left;
+}
+.dash2 {
+    background-color:white;
+    height: 160px;
+    width: 496px;
+    margin-top: 48px;
+    margin-left: 10px;
+    margin-right:10px;
+    float:right;
+}
+.title {
+    height:65px;
+    background-color:lemonchiffon;
+    margin-top:-61px;
+}
+.dashti {
+    font-size:26px;
+}
+.recent {
+        margin-top: -51px;
+    font-size: 21px;
+}
+.das {
+    height:60px;
+    background-color:white;
+}
+.nisdiv input[type="button"]{
+        border:none;
+    outline:none;
+    height:40px;
+    background:#1c8abd;
+    color:#fff;
+    font-size:18px;
+    border-radius:20px;
+    }
+.grid {
+    position:absolute;
+}
+.nisdiv input[type="button"]:hover{
+     border:none;
+    outline:none;
+    height:40px;
+    background:#39dc79;
+    color:#fff;
+    font-size:18px;
+    border-radius:20px;
+}
